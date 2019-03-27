@@ -15,12 +15,12 @@ The final, combined and aggregated dataset, has been saved to *aggregated_output
 
 * *subject_id* - Integer, unique identifier of subject involved in the experiment. These are in the range [1:30]
 * *activity_name* - Factor, naming the activity relevant to that row:
-1 WALKING
-2 WALKING_UPSTAIRS
-3 WALKING_DOWNSTAIRS
-4 SITTING
-5 STANDING
-6 LAYING
+1. WALKING
+2. WALKING_UPSTAIRS
+3. WALKING_DOWNSTAIRS
+4. SITTING
+5. STANDING
+6. LAYING
 
 
 
