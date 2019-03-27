@@ -1,8 +1,8 @@
 
 library(dplyr)
-library(tidyr)
 
-# Coursera "Getting and cleaning data" - Course project submission, Dan James 26/3/19
+# Coursera "Getting and cleaning data" - Course project submission, Dan James 27/3/19
+# This script expects the input data files to live in the 'data' sub-directory
 
 # Load master/reference data
 features <- read.table("data/features.txt",stringsAsFactors = FALSE,header = FALSE)
@@ -76,6 +76,6 @@ columnsOfInterest[1:3] <- TRUE
 # Adjust combinedDataSet to only keep relevant columns
 combinedDataSet <- combinedDataSet[,columnsOfInterest]
 
+# Produce 'averagedDataSet', where all columns are averaged, with a grouping on the subject and activity.
 averagedDataSet <- combinedDataSet %>% group_by(subject_id,activity_name) %>% summarise_all(funs(mean))
 
-View(averagedDataSet)
