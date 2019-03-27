@@ -29,8 +29,8 @@ Once the *combinedDataSet* has been produced, a new data set **averagedDataSet**
 Columns in the output datasets *combinedDataSet* and *averagedDataSet* share the same name as is provided
 in the input dataset. These data are described in *features_info.txt*. Additionally, the output datasets include:
 
-* **subject_id** Identifier of the subject involved in the expriment
-* **activity_name** Identifier of the activity being undertaken. This is looked-up from the input file *activity_labels.txt*
+* **subject_id** (integer) Identifier of the subject involved in the expriment
+* **activity_name** (factor) Identifier of the activity being undertaken. This is looked-up from the input file *activity_labels.txt*
 
 ## Dependencies
 
