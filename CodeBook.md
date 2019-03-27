@@ -1,38 +1,19 @@
 
-# Transformation steps
+# Input data
 
-## Tidying of Test/Training data
+The input data, provided as part of the assignment package and included in this repo. The technical details of this 
+are best described in *features_info.txt*. 
 
-The 'Test' and 'Train' datasets are individually transformed/tidied as follows:
-NB this is an outline - Detailed instructions can be found in the main script **run_analysis.R** 
+# Output data
 
-* Loaded from the original data, eg x_.txt, y_.txt, subject_.txt 
-* Join (x) data (the measurements), with (y) data (the activity #'s). This takes the activity # in the (y) data file and looks up from the activity names/labels file *activity_labels.txt*, creating a new column *activity_name*.
-* Combine with the *subject* data to create new column *subject_id*
+The tidied data (grouped by subject/activity and averaged across all measures) shares the same column names as
+the primary input data. For the purposes of this assignment, only columns referring to *mean* or *standard deviation*
+have been retained.
 
-## Concatenation of Test/Training data
+The final, combined and aggregated dataset, has been saved to *aggregated_output_data.txt*. This contains the 
+*-mean()* and *-std()* columns included (as averages) in the dataset(s), along with additional columns:
 
-Once the Test/Train datasets have been transformed as described above, they are concatenated together to 
-produce **combinedDataSet**. At this point it is reduced down to only include the required columns, which are
-determined to be those including *-mean()* or *-std()* in their names. ie Those that are mean, or standard deviation,
-as described by the input data overview.
+* *subject_id* - Integer, unique identifier of subject involved in the experiment.
+* *activity_name* - Factor, naming the activity relevant to that row.
 
-## Aggregation of combined data to produce averages
-
-Once the *combinedDataSet* has been produced, a new data set **averagedDataSet** is built by grouping the
-*subject_id* and *activity_name* columns, and calculating the mean across all remaining columns.
-
-# Additional information
-
-## Columns in output data set
-
-Columns in the output datasets *combinedDataSet* and *averagedDataSet* share the same name as is provided
-in the input dataset. These data are described in *features_info.txt*. Additionally, the output datasets include:
-
-* **subject_id** (integer) Identifier of the subject involved in the expriment
-* **activity_name** (factor) Identifier of the activity being undertaken. This is looked-up from the input file *activity_labels.txt*
-
-## Dependencies
-
-This script uses the **dplyr** package for some aspects of the transformation.
 
