@@ -11,9 +11,18 @@ the primary input data. For the purposes of this assignment, only columns referr
 have been retained.
 
 The final, combined and aggregated dataset, has been saved to *aggregated_output_data.txt*. This contains the 
-*-mean()* and *-std()* columns included (as averages) in the dataset(s), along with additional columns:
+*-mean()* and *-std()* columns included (as averages, all numeric) in the dataset(s), along with additional columns:
 
-* *subject_id* - Integer, unique identifier of subject involved in the experiment.
-* *activity_name* - Factor, naming the activity relevant to that row.
+* *subject_id* - Integer, unique identifier of subject involved in the experiment. These are in the range [1:30]
+* *activity_name* - Factor, naming the activity relevant to that row:
+1 WALKING
+2 WALKING_UPSTAIRS
+3 WALKING_DOWNSTAIRS
+4 SITTING
+5 STANDING
+6 LAYING
+
+
+
 
 
